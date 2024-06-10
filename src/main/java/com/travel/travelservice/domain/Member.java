@@ -7,31 +7,29 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class User {
+public class Member {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String username;
+    private String memberName;
     private String email;
     private String password;
-    private String profile_image;
 
     @Builder
-    public User(String username, String email, String password, String profile_image) {
-        this.username = username;
+    public Member(String memberName, String email, String password) {
+        this.memberName = memberName;
         this.email = email;
         this.password = password;
-        this.profile_image = profile_image;
     }
 
     public Long getId() {
         return id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getMemberName() {
+        return memberName;
     }
 
     public String getEmail() {
@@ -42,7 +40,5 @@ public class User {
         return password;
     }
 
-    public String getProfile_image() {
-        return profile_image;
-    }
+
 }
