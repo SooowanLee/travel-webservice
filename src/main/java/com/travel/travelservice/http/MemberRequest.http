@@ -1,14 +1,14 @@
 ### 사용자 저장
-POST {{root-path}}/api/v1/users
+POST {{root-path}}/api/v1/signup
 Content-Type: application/json
 
 < ./post.json
 
 ### 회원 전체 조회
-GET {{root-path}}/api/v1/users
+GET {{root-path}}/api/v1/member
 
 ### 특정 회원 조회
-GET {{root-path}}/api/v1/users/{{id}}
+GET {{root-path}}/api/v1/member/{{id}}
 
 
 
